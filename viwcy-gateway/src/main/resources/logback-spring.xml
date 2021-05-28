@@ -3,7 +3,8 @@
 
     <springProperty name="APP_NAME" source="spring.application.name" scope="context" defaultValue="viwcy-gateway"/>
     <!-- java -DLOG_HOME="路径" -jar xxx.jar |动态指定路径，要是没有指定，默认在当前目录的logs文件夹下-->
-    <property name="log.path" value="${LOG_PATH:-.}/logs"/>
+    <!--    <property name="log.path" value="${LOG_PATH:-.}/"/>-->
+    <property name="log.path" value="/data/logs"/>
 
     <!-- 彩色日志 -->
     <!-- 彩色日志依赖的渲染类 -->
