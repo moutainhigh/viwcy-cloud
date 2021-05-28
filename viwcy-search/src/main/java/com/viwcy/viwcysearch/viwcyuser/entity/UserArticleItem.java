@@ -1,4 +1,4 @@
-package com.viwcy.viwcysearch.viwcyuser;
+package com.viwcy.viwcysearch.viwcyuser.entity;
 
 import com.viwcy.viwcysearch.entity.ESBaseEntity;
 import lombok.*;

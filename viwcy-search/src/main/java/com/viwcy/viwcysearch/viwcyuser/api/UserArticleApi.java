@@ -2,8 +2,8 @@ package com.viwcy.viwcysearch.viwcyuser.api;
 
 import com.viwcy.basecommon.common.BaseController;
 import com.viwcy.basecommon.common.ResultEntity;
-import com.viwcy.viwcysearch.viwcyuser.UserArticleItem;
-import com.viwcy.viwcysearch.viwcyuser.service.ESUserArticleService;
+import com.viwcy.viwcysearch.viwcyuser.entity.UserArticleItem;
+import com.viwcy.viwcysearch.viwcyuser.service.UserArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,17 +24,17 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/article")
-public class ESUserArticleApi extends BaseController {
+public class UserArticleApi extends BaseController {
 
     @Autowired
-    private ESUserArticleService esUserArticleService;
+    private UserArticleService userArticleService;
 
     /**
      * 分词高亮查询
      */
     @PostMapping("/hightList")
     public ResultEntity hightList(@RequestBody UserArticleItem item) {
-        return success(esUserArticleService.queryHightList(item));
+        return success(userArticleService.queryHightList(item));
     }
 
     /**
@@ -42,6 +42,6 @@ public class ESUserArticleApi extends BaseController {
      */
     @PostMapping("/hightPage")
     public ResultEntity hightPage(@RequestBody UserArticleItem item) {
-        return success(esUserArticleService.queryHightPage(item));
+        return success(userArticleService.queryHightPage(item));
     }
 }

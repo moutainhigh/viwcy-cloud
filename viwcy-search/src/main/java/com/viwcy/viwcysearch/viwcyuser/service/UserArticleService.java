@@ -1,6 +1,6 @@
 package com.viwcy.viwcysearch.viwcyuser.service;
 
-import com.viwcy.viwcysearch.viwcyuser.UserArticleItem;
+import com.viwcy.viwcysearch.viwcyuser.entity.UserArticleItem;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
  * Author  FQ
  * Version 0.0.1.RELEASE
  */
-public interface ESUserArticleService {
+public interface UserArticleService {
 
     /**
      * 分词高亮查询

@@ -1,6 +1,6 @@
 package com.viwcy.viwcysearch.viwcyuser.repository;
 
-import com.viwcy.viwcysearch.viwcyuser.UserArticleItem;
+import com.viwcy.viwcysearch.viwcyuser.entity.UserArticleItem;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Component;
 
@@ -17,5 +17,5 @@ import org.springframework.stereotype.Component;
  * Version 0.0.1.RELEASE
  */
 @Component
-public interface ESUserArticleRepository extends ElasticsearchRepository<UserArticleItem, Long> {
+public interface UserArticleRepository extends ElasticsearchRepository<UserArticleItem, Long> {
 }

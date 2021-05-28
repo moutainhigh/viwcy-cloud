@@ -4,8 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.viwcy.basecommon.constant.TopicConstant;
 import com.viwcy.basecommon.exception.BusinessException;
 import com.viwcy.viwcysearch.service.TopicService;
-import com.viwcy.viwcysearch.viwcyuser.UserArticleItem;
-import com.viwcy.viwcysearch.viwcyuser.repository.ESUserArticleRepository;
+import com.viwcy.viwcysearch.viwcyuser.entity.UserArticleItem;
+import com.viwcy.viwcysearch.viwcyuser.repository.UserArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +29,7 @@ import java.util.Optional;
 public class UserArticleTopicServiceImpl implements TopicService {
 
     @Autowired
-    private ESUserArticleRepository esUserArticleRepository;
+    private UserArticleRepository userArticleRepository;
 
     /**
      * 监听到消息，保存数据
@@ -37,7 +37,7 @@ public class UserArticleTopicServiceImpl implements TopicService {
     @Override
     public void execute(String content) {
         UserArticleItem userArticleItem = JSONObject.parseObject(content, UserArticleItem.class);
-        UserArticleItem save = esUserArticleRepository.save(userArticleItem);
+        UserArticleItem save = userArticleRepository.save(userArticleItem);
         if (!Optional.ofNullable(save).isPresent()) {
             log.error("ES保存文章失败，主键ID = [{}]", userArticleItem.getId());
             throw new BusinessException("ES保存文章失败");

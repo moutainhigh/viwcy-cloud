@@ -1,7 +1,7 @@
 package com.viwcy.viwcysearch.viwcyuser.service.impl;
 
-import com.viwcy.viwcysearch.viwcyuser.UserArticleItem;
-import com.viwcy.viwcysearch.viwcyuser.service.ESUserArticleService;
+import com.viwcy.viwcysearch.viwcyuser.entity.UserArticleItem;
+import com.viwcy.viwcysearch.viwcyuser.service.UserArticleService;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -37,7 +37,7 @@ import java.util.Map;
  */
 @Slf4j
 @Service
-public class ESUserArticleServiceImpl implements ESUserArticleService {
+public class UserArticleServiceImpl implements UserArticleService {
 
     @Autowired
     private ElasticsearchRestTemplate elasticsearchRestTemplate;

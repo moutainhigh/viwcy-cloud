@@ -46,6 +46,7 @@ public class UserArticleServiceImpl extends ServiceImpl<UserArticleMapper, UserA
             throw new BusinessException("文章保存失败");
         }
         try {
+            //TODO  暂时先使用mq保证数据一致性，后期可以利用binlog日志组件canal
             rocketMQProducer.syncSend(TopicConstant.VIWCY_USER_TOPIC, TopicConstant.VIWCY_USER_ARTICLE_TAG, JSON.toJSONString(userArticle));
             log.info("MQ消息发送成功，主键ID = [{}]", userArticle.getId());
         } catch (Exception e) {
