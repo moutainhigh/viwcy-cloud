@@ -36,7 +36,7 @@ spring:
             - name: Hystrix
               args:
                 name: viwcy-user
-                fallbackUri: 'forward:/fallback/user-server'
+                fallbackUri: 'forward:/fallback/viwcy-user'
         - id: viwcy-goods
           uri: lb://viwcy-goods/
           predicates:
@@ -46,7 +46,7 @@ spring:
             - name: Hystrix
               args:
                 name: viwcy-goods
-                fallbackUri: 'forward:/fallback/goods-server'
+                fallbackUri: 'forward:/fallback/viwcy-goods'
         - id: viwcy-pay
           uri: lb://viwcy-pay/
           predicates:
@@ -56,7 +56,7 @@ spring:
             - name: Hystrix
               args:
                 name: viwcy-pay
-                fallbackUri: 'forward:/fallback/pay-server'
+                fallbackUri: 'forward:/fallback/viwcy-pay'
         - id: viwcy-search
           uri: lb://viwcy-search/
           predicates:
