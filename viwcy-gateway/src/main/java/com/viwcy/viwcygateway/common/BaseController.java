@@ -1,4 +1,4 @@
-package com.viwcy.gatewayserver.common;
+package com.viwcy.viwcygateway.common;
 
 /**
  * TODO //

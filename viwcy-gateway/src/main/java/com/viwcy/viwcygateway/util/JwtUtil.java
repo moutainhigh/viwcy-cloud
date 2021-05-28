@@ -1,4 +1,4 @@
-package com.viwcy.gatewayserver.util;
+package com.viwcy.viwcygateway.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

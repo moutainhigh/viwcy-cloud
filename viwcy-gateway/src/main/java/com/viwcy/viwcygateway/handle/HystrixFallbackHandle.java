@@ -1,7 +1,7 @@
-package com.viwcy.gatewayserver.handle;
+package com.viwcy.viwcygateway.handle;
 
-import com.viwcy.gatewayserver.common.BaseController;
-import com.viwcy.gatewayserver.common.ResultEntity;
+import com.viwcy.viwcygateway.common.BaseController;
+import com.viwcy.viwcygateway.common.ResultEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.support.ServerWebExchangeUtils;
 import org.springframework.web.bind.annotation.PostMapping;

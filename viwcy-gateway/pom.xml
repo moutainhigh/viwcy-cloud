@@ -9,9 +9,9 @@
     </parent>
 
     <groupId>com.viwcy</groupId>
-    <artifactId>gateway-server</artifactId>
+    <artifactId>viwcy-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gateway-server</name>
+    <name>viwcy-gateway</name>
     <description>网关服务</description>
 
     <dependencies>

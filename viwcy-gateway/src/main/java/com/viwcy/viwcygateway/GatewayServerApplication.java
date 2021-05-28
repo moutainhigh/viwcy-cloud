@@ -1,4 +1,4 @@
-package com.viwcy.gatewayserver;
+package com.viwcy.viwcygateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

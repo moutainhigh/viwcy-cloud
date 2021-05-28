@@ -1,4 +1,4 @@
-package com.viwcy.gatewayserver.constant;
+package com.viwcy.viwcygateway.constant;
 
 /**
  * TODO //

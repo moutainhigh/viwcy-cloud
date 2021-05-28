@@ -1,8 +1,8 @@
-package com.viwcy.gatewayserver.filter;
+package com.viwcy.viwcygateway.filter;
 
 import com.alibaba.fastjson.JSONObject;
-import com.viwcy.gatewayserver.constant.JwtEnum;
-import com.viwcy.gatewayserver.util.JwtUtil;
+import com.viwcy.viwcygateway.constant.JwtEnum;
+import com.viwcy.viwcygateway.util.JwtUtil;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.SignatureException;
 import lombok.Data;
